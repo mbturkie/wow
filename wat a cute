@@ -1,0 +1,18 @@
+import numpy as np
+
+
+
+count=0 
+a=int(input("We ll choose 1-100 random  10 numbers. Input a number and we ll try to make lower all members of that array from number that you input.:  "))  
+while True: 
+    rnd_numbers=np.random.randint(1,100,10)
+    result=rnd_numbers.max()
+    count+=1
+    
+    if result>=a:
+        print(f"Attempt {count} : FAILED")
+    else:
+        print(f"Attempt {count} : SUCCESSFUL.All members of array are lower than {a} ")
+        print(rnd_numbers)
+        print(result)
+        break
